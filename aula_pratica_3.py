@@ -94,38 +94,70 @@
 # valor1 = ()
 # Valor2 = ()
 
-valor1 = int(input('Digite o primeiro valor:'))
-valor2 = int(input('Digite o segundo valor:'))
-print('Adição +')
-print('subtração -')
-print('Multiplicação *')
-print('Divisão /')
+# valor1 = int(input('Digite o primeiro valor:'))
+# valor2 = int(input('Digite o segundo valor:'))
+# print('Adição +')
+# print('subtração -')
+# print('Multiplicação *')
+# print('Divisão /')
 
 
-operacao = input('Escolha a operação que deseja fazer :')
+# operacao = input('Escolha a operação que deseja fazer :')
 
 
 
-if (operacao == '+'):
-    resultado= valor1 + valor2
-    print(f'A soma é:{resultado}')
+# if (operacao == '+'):
+#     resultado= valor1 + valor2
+#     print(f'A soma é:{resultado}')
 
-elif (operacao == '-'):
-    resultado = valor1 - valor2
-    print(f'A subtração é: {resultado}') 
+# elif (operacao == '-'):
+#     resultado = valor1 - valor2
+#     print(f'A subtração é: {resultado}') 
 
-elif (operacao == '*'):
-    resultado = valor1 * valor2
-    print(f'O resultado da multiplicação é: {resultado}')
+# elif (operacao == '*'):
+#     resultado = valor1 * valor2
+#     print(f'O resultado da multiplicação é: {resultado}')
 
-elif (operacao == '/'):
-     if valor2 != 0:
-        resultado = valor1 // valor2        
-        print(f'O resultado da divisão é: {resultado}')
+# elif (operacao == '/'):
+#      if valor2 != 0:
+#         resultado = valor1 // valor2        
+#         print(f'O resultado da divisão é: {resultado}')
+#      else:
+#         print('Erro: não é permitido fazer a operação de divisão por 0')
+
+# else:
+#     print('Operação inválida. Escolha entre: soma, subtracao, multiplicacao, divisao.')
+
+
+kwh = float(input('Qual o valor gasto em kwh:'))
+tipo = input('Digite o tipo da sua unidade consumidora? (R , C ou I )')
+
+
+if (tipo == 'R'):
+    if kwh >= 500:
+       custo = 0.65
+    else:
+       custo = 0.40
+    print(f'Total a pagar R$:{kwh * custo}') 
+
+elif (tipo == 'I'):
+      if kwh >= 5000:
+          custo = 0.60
+      else:
+          custo = 0.55
+      print(f'Total a pagar R$: {kwh * custo}')  
+
+elif (tipo == 'C'):
+     if kwh >= 1000:
+         custo = 0.60
      else:
-        print('Erro: não é permitido fazer a operação de divisão por 0')
+         custo = 0.55  
+     print(f'Total a pagar R$: {kwh * custo}')
+    
+
 
 else:
-    print('Operação inválida. Escolha entre: soma, subtracao, multiplicacao, divisao.')
+    print('Instalação inexistente.')
+  
 
     
