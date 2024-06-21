@@ -133,7 +133,7 @@ kwh = float(input('Qual o valor gasto em kwh:'))
 tipo = input('Digite o tipo da sua unidade consumidora? (R , C ou I )')
 
 
-if (tipo == 'R'):
+if                 (tipo == 'R'):
     if kwh >= 500:
        custo = 0.65
     else:
