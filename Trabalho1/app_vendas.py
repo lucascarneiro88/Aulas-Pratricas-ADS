@@ -27,9 +27,9 @@ valorTotalParcelado = valorParcela * quantidadeParcelas
 
 #exibe a quantidade de parcelas e os juros aplicados ao valor
 if quantidadeParcelas >= 4:
-    print(f"Você escolheu {quantidadeParcelas} parcelas e o valor com juros parcelados neste caso é: R${valorParcela:.2f}")# :.2f para exibir 2 casas decimais
-    print(f"O valor total parcelado é: R${valorTotalParcelado:.2f}") 
+    print(f'Você escolheu {quantidadeParcelas} parcelas e o valor com juros parcelados neste caso é: R${valorParcela:.2f}')# :.2f para exibir 2 casas decimais
+    print(f'O valor total parcelado é: R${valorTotalParcelado:.2f}') 
 
 # exibira o valor referente a parcela mnor que 4 que o juros é 0%
 else:
-    print(f"O valor total da parcela sem juros é: R${valorTotalParcelado:.2f}")
+    print(f'O valor total da parcela sem juros é: R${valorTotalParcelado:.2f}')
