@@ -43,7 +43,7 @@ while True:  # inicia o loop
             preco = 21.00
 
     # Exigencia 5 de 8
-    total += preco # pega o total de pedidos e  soma os valores dos pedidos
+    total += preco # pega o preço do pedido e  soma o valor  a variavel atualizando-a 
     print(f"Pedido adicionado: {sabor} tamanho {tamanho} por R$ {preco:.2f}")# print exibe o sabor,tamanho e o preço
 
     # Exigência 6 de 8
