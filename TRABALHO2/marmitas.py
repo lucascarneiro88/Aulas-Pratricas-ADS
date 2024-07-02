@@ -1,4 +1,5 @@
 # Exigência 1 de 8 
+# OBS: # aspas duplas para delimitar a f-string porque há aspas simples dentro da string
 print(f"{'-' * 10}  Bem vindos a loja de Marmitas do Lucas Carneiro {'-' * 10}")#exibe mensagem boas vindas
 #exibe o menu cardapio com as opcoes
 print('-' * 100)
@@ -44,18 +45,18 @@ while True:  # inicia o loop
 
     # Exigencia 5 de 8
     total += preco # pega o preço do pedido e  soma o valor  a variavel atualizando-a 
-    print(f"Pedido adicionado: {sabor} tamanho {tamanho} por R$ {preco:.2f}")# print exibe o sabor,tamanho e o preço
+    print(f'Pedido adicionado: {sabor} tamanho {tamanho} por R$ {preco:.2f}')# print exibe o sabor,tamanho e o preço
 
     # Exigência 6 de 8
     # Pergunta se o usuario deseja pedir mais algum item do menu
-    novoPedido = input("Deseja pedir mais alguma coisa? (S/N): ").upper() #Se digitar S(sim) continua se digitar N(não) encerra e passa para retornar o total
+    novoPedido = input('Deseja pedir mais alguma coisa? (S/N): ').upper() #Se digitar S(sim) continua se digitar N(não) encerra e passa para retornar o total
     if novoPedido != 'S': #se digitar algo diferente de S (sim) termina o programa retorna o total dos pedidos
         #Exigencia 7 de 8
         break
 
 #Exigencia 8 de 8 ,comentários 
 # Exibe oa soma do total de todos os pedidos 
-print(f"Total a pagar: R$ {total:.2f}")# :.2f exibe 2 casas decimais após o ponto
+print(f'Total a pagar: R$ {total:.2f}')# :.2f exibe 2 casas decimais após o ponto
 
 
 
