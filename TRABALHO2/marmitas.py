@@ -28,29 +28,31 @@ while True:  # inicia o loop
 
     # Exigência 4 de 8
     if sabor == 'BA': #  se a escolha for  Bife Acebolado ele passa para o tamanho e se finalizar retorna preço
+        tipoSabor = 'Bife Acebolado'
         if tamanho == 'P':
-            preco = 16.00
+           custo = 16.00
         elif tamanho == 'M':
-            preco = 18.00
+           custo = 18.00
         elif tamanho == 'G':
-            preco = 22.00
+           custo = 22.00
     else: #  else ===== se não, o sabor for Frango Frito o escolhido ele  passa para o tamanho e se finalizar retorna preço
         sabor == 'FF'
+        tipoSabor = 'Filé de Frango'
         if tamanho == 'P':
-            preco = 15.00
+           custo = 15.00
         elif tamanho == 'M':
-            preco = 17.00
+           custo = 17.00
         elif tamanho == 'G':
-            preco = 21.00
+           custo = 21.00
 
     # Exigencia 5 de 8
-    total += preco # pega o preço do pedido e  soma o valor  a variavel atualizando-a 
-    print(f'Pedido adicionado: {sabor} tamanho {tamanho} por R$ {preco:.2f}')# print exibe o sabor,tamanho e o preço
+    total +=custo # pega o preço do pedido e  soma o valor  a variavel atualizando-a 
+    print(f'Pedido adicionado: {tipoSabor} tamanho {tamanho} por R$ {custo:.2f}')# print exibe o sabor,tamanho e o preço
 
     # Exigência 6 de 8
     # Pergunta se o usuario deseja pedir mais algum item do menu
-    novoPedido = input('Deseja pedir mais alguma coisa? (S/N): ').upper() #Se digitar S(sim) continua se digitar N(não) encerra e passa para retornar o total
-    if novoPedido != 'S': #se digitar algo diferente de S (sim) termina o programa retorna o total dos pedidos
+    pedirNovamente = input('Deseja solicitar mais algum item? (S/N): ').upper() #Se digitar S(sim) continua se digitar N(não) encerra e passa para retornar o total
+    if pedirNovamente != 'S': #se digitar algo diferente de S (sim) termina o programa retorna o total dos pedidos
         #Exigencia 7 de 8
         break
 
