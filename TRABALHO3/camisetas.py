@@ -27,20 +27,20 @@ def quantidadeDeCamisetas():
     while True:
         # Exigencia 5 de 7: uso do try / except
         try:
-            camisetas = int(input('Digite a quantidade de camisetas: '))
+            quantidadeCamisetas = int(input('Digite a quantidade de camisetas: '))
             
-            if camisetas > 20000:
+            if quantidadeCamisetas > 20000:
                 print('Não aceitamos pedidos nessa quantidade. Tente novamente.')
             else:
-                if camisetas < 20:
+                if quantidadeCamisetas < 20:
                     desconto = 0.0 # Se número de camisetas for menor que 20 não há desconto na venda
-                elif 20 <= camisetas < 200:
+                elif 20 <= quantidadeCamisetas < 200:
                     desconto = 0.05 # Se número de camisetas for igual ou maior que 20 e menor que 200, o desconto será de 5%
-                elif 200 <= camisetas < 2000:
+                elif 200 <= quantidadeCamisetas < 2000:
                     desconto = 0.07 # Se número de camisetas for igual ou maior que 200 e menor que 2000, o desconto será de 7%
-                elif 2000 <= camisetas <= 20000:
+                elif 2000 <= quantidadeCamisetas <= 20000:
                     desconto = 0.12 # Se número de camisetas for igual ou maior que 2000 e menor ou igual a 20000, o desconto será de 12%
-                return camisetas, desconto
+                return quantidadeCamisetas, desconto
                 
         except ValueError:
             print('Valor inválido, por favor digite um número válido.')
@@ -63,15 +63,16 @@ def frete():
 # Deve-se implementar o total a pagar no código principal (main), ou seja, não pode estar dentro de função, conforme o enunciado
 # Exigencia 5 de 7
 if __name__ == '__main__': # padrão python para nomear programa principal
-    modelo, valorUnidade = escolhaDeModelo() # Solicita o modelo e obtem o valor da unidade
+    modeloCamiseta, valorUnitario = escolhaDeModelo() # Solicita o modelo e obtem o valor da unidade
 
-    quantidadeCamisetas, desconto = quantidadeDeCamisetas() # Solicita a quantidade de camisetas p/ obter o desconto
+    quantidadeDeCamisetas, desconto = quantidadeDeCamisetas() # Solicita a quantidade de camisetas p/ obter o desconto
 
-    valorTotalCamisetas = quantidadeCamisetas * valorUnidade * (1 - desconto) # Calculo do valor total de camisetas com o desconto
+    valorTotalCamisetas = quantidadeDeCamisetas * valorUnitario * (1 - desconto) # Calculo do valor total de camisetas com o desconto
     
     freteEscolhido, valorFrete = frete() # Solicita a opção do frete p/ obter o valor a ser calculado
 
-    totalPagar = valorTotalCamisetas + valorFrete # Calcula o valor total a ser pago incluindo o frete
+    precoTotalPagar = valorTotalCamisetas + valorFrete # Calcula o valor total a ser pago incluindo o frete
 
     # Exibição detalhada dos cálculos e valores em um único print
-    print(f'Total: R$ {totalPagar:.2f} (modelo: {valorUnidade * quantidadeCamisetas:.2f} (com desconto: {valorTotalCamisetas:.2f}) + frete: {valorFrete:.2f})')
+print(f'PREÇO TOTAL A PAGAR: R$ ({precoTotalPagar:.2f}) , PREÇO MODELO:({valorUnitario:.2f} ), DESCONTO APLICADO: ({valorTotalCamisetas:.2f}) + FRETE: ({valorFrete:.2f})')
+    
